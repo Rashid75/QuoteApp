@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{selectedCategory.category}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of selectedCategory.quotes; let i=index;">
+    <ion-card-header>
+      #{{i+1}}
+    </ion-card-header>
+    <hr>
+    <ion-card-content>
+      {{item.text}}
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-right>
+        <button (click)="addToFavourite(item)" ion-button clear small>
+          Favourite
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
