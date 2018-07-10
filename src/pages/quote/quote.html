@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Favourte Quote</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <ion-card padding>
+    <ion-card-title>
+      {{quote?.person}}
+    </ion-card-title>
+    <ion-card-content>
+      {{quote?.text}}
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button small outline color="danger" (click)="onClose(true)">Unfavourite</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <button ion-button (click)="onClose(false)" color="danger">Close</button>
+</ion-content>

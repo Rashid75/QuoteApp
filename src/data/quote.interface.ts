@@ -1,5 +1,5 @@
 export interface Quote {
-    id: string;
-    perosn: string;
-    text: string;
+  id: string;
+  person: string;
+  text: string;
 }
